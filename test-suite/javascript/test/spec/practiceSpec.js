@@ -92,80 +92,139 @@ describe("javascript problems", function() {
 
   describe("Problem 2 - Time Conversion", function() {
     it("Test Case #1", function() {
-      expect(
-        timeConversion("07:05:45PM")
-      ).toEqual("19:05:45");
+      expect(timeConversion("07:05:45PM")).toEqual("19:05:45");
     });
 
     it("Test Case #2", function() {
-      expect(
-        timeConversion("12:40:22AM")
-      ).toEqual("00:40:22");
+      expect(timeConversion("12:40:22AM")).toEqual("00:40:22");
     });
 
     it("Test Case #3", function() {
-      expect(
-        timeConversion("12:05:39PM")
-      ).toEqual("12:05:39");
+      expect(timeConversion("12:05:39PM")).toEqual("12:05:39");
     });
 
     it("Test Case #4", function() {
-      expect(
-        timeConversion("11:05:39PM")
-      ).toEqual("23:05:39");
+      expect(timeConversion("11:05:39PM")).toEqual("23:05:39");
     });
-    
   });
 
   describe("Problem 3 - Magic Square", function() {
     it("Test Case #1", function() {
-      expect(
-        formingMagicSquare([[4, 5, 8], [2, 4, 1], [1, 9, 7]])
-      ).toEqual(14);
+      expect(formingMagicSquare([[4, 5, 8], [2, 4, 1], [1, 9, 7]])).toEqual(14);
     });
 
     it("Test Case #2", function() {
-      expect(
-        formingMagicSquare([[4, 9, 2], [3, 5, 7], [8, 1, 5]])
-      ).toEqual(1);
+      expect(formingMagicSquare([[4, 9, 2], [3, 5, 7], [8, 1, 5]])).toEqual(1);
     });
 
     it("Test Case #3", function() {
-      expect(
-        formingMagicSquare([[2, 5, 4],[4, 6, 9],[4, 5, 2]])
-      ).toEqual(16);
+      expect(formingMagicSquare([[2, 5, 4], [4, 6, 9], [4, 5, 2]])).toEqual(16);
     });
   });
 
   describe("Problem 4 - Longest Palindrome Substring", function() {
     it("Test Case #1", function() {
-      expect(
-        longestPalindrome("ababababa")
-      ).toEqual("ababababa");
+      expect(longestPalindrome("ababababa")).toEqual("ababababa");
     });
 
     it("Test Case #2", function() {
-      expect(
-        longestPalindrome("ccc")
-      ).toEqual("ccc");
+      expect(longestPalindrome("ccc")).toEqual("ccc");
     });
 
     it("Test Case #3", function() {
-      expect(
-        longestPalindrome("cccd")
-      ).toEqual("ccc");
+      expect(longestPalindrome("cccd")).toEqual("ccc");
     });
 
     it("Test Case #4", function() {
-      expect(
-        longestPalindrome("cbbd")
-      ).toEqual("bb");
+      expect(longestPalindrome("cbbd")).toEqual("bb");
     });
 
     it("Test Case #5", function() {
-      expect(
-        longestPalindrome("badadac")
-      ).toEqual("adada");
+      expect(longestPalindrome("badadac")).toEqual("adada");
+    });
+  });
+
+  describe("Problem 5 - 3Sum", function() {
+    it("Test Case #1", function() {
+      expect(threeSum([-1, 0, 1, 2, -1, -4])).toContain(
+        [-1, 0, 1] && [-1, -1, 2]
+      );
+    });
+
+    it("Test Case #2", function() {
+      expect(threeSum([0, -4, -1, -4, -2, -3, 2])).toEqual([[-2, 0, 2]]);
+    });
+
+    it("Test Case #3", function() {
+      expect(threeSum([3, 0, -2, -1, 1, 2])).toContain(
+        [-2, -1, 3] && [-2, 0, 2] && [-1, 0, 1]
+      );
+    });
+  });
+
+  describe("Problem 5 - Roman to Integer", function() {
+    it("Test Case #1", function() {
+      expect(romanToInt("III")).toEqual(3);
+    });
+
+    it("Test Case #2", function() {
+      expect(romanToInt("IV")).toEqual(4);
+    });
+
+    it("Test Case #3", function() {
+      expect(romanToInt("IX")).toEqual(9);
+    });
+
+    it("Test Case #4", function() {
+      expect(romanToInt("LVIII")).toEqual(58);
+    });
+
+    it("Test Case #5", function() {
+      expect(romanToInt("MCMXCIV")).toEqual(1994);
+    });
+  });
+
+  describe("Problem 5 - Roman to Integer", function() {
+    it("Test Case #1", function() {
+      expect(intToRoman(3)).toEqual("III");
+    });
+
+    it("Test Case #2", function() {
+      expect(intToRoman(4)).toEqual("IV");
+    });
+
+    it("Test Case #3", function() {
+      expect(intToRoman(90)).toEqual("XC");
+    });
+
+    it("Test Case #4", function() {
+      expect(intToRoman(58)).toEqual("LVIII");
+    });
+
+    it("Test Case #5", function() {
+      expect(intToRoman(1994)).toEqual("MCMXCIV");
+    });
+  });
+
+  describe("Problem 7 - Disappeared Numbers", function() {
+    it("Test Case #1", function() {
+      expect(findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1])).toEqual([5, 6]);
+    });
+
+    it("Test Case #2", function() {
+      expect(findDisappearedNumbers([2, 2])).toEqual([1]);
+    });
+
+    it("Test Case #3", function() {
+      expect(findDisappearedNumbers([1, 1])).toEqual([2]);
+    });
+
+    it("Test Case #4", function() {
+      expect(findDisappearedNumbers([2, 2, 2])).toEqual([1,3]);
+    });
+
+    it("Test Case #5", function() {
+      expect(findDisappearedNumbers([4, 3, 2, 6, 8, 2, 3, 1, 1])).toEqual([5, 7, 9]);
     });
   });
 });
