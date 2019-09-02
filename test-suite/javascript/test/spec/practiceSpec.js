@@ -162,51 +162,8 @@ describe("javascript problems", function() {
     });
   });
 
-  describe("Problem 5 - Roman to Integer", function() {
-    it("Test Case #1", function() {
-      expect(romanToInt("III")).toEqual(3);
-    });
 
-    it("Test Case #2", function() {
-      expect(romanToInt("IV")).toEqual(4);
-    });
-
-    it("Test Case #3", function() {
-      expect(romanToInt("IX")).toEqual(9);
-    });
-
-    it("Test Case #4", function() {
-      expect(romanToInt("LVIII")).toEqual(58);
-    });
-
-    it("Test Case #5", function() {
-      expect(romanToInt("MCMXCIV")).toEqual(1994);
-    });
-  });
-
-  describe("Problem 5 - Roman to Integer", function() {
-    it("Test Case #1", function() {
-      expect(intToRoman(3)).toEqual("III");
-    });
-
-    it("Test Case #2", function() {
-      expect(intToRoman(4)).toEqual("IV");
-    });
-
-    it("Test Case #3", function() {
-      expect(intToRoman(90)).toEqual("XC");
-    });
-
-    it("Test Case #4", function() {
-      expect(intToRoman(58)).toEqual("LVIII");
-    });
-
-    it("Test Case #5", function() {
-      expect(intToRoman(1994)).toEqual("MCMXCIV");
-    });
-  });
-
-  describe("Problem 7 - Disappeared Numbers", function() {
+  describe("Problem 5 - Disappeared Numbers", function() {
     it("Test Case #1", function() {
       expect(findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1])).toEqual([5, 6]);
     });
