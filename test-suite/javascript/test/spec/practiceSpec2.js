@@ -89,4 +89,26 @@ describe("javascript problems", function() {
       expect(myAtoi("   +42")).toEqual(42);
     });
   });
+
+  describe("Problem 4 - Valid Parenthesis", function() {
+    it("Test Case #1", function() {
+      expect(isValid("()")).toBe(true);
+    });
+
+    it("Test Case #2", function() {
+        expect(isValid("()[]{}")).toBe(true);
+    });
+
+    it("Test Case #3", function() {
+        expect(isValid("(]")).toBe(false);
+    });
+
+    it("Test Case #4", function() {
+        expect(isValid("([)]")).toBe(false);
+    });
+
+    it("Test Case #5", function() {
+        expect(isValid("{[]}")).toBe(true);
+    });
+  });
 });

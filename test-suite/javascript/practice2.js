@@ -1,4 +1,3 @@
-
 //////Roman to Integer//////
 // Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 
@@ -14,8 +13,8 @@
 
 // Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:
 
-// I can be placed before V (5) and X (10) to make 4 and 9. 
-// X can be placed before L (50) and C (100) to make 40 and 90. 
+// I can be placed before V (5) and X (10) to make 4 and 9.
+// X can be placed before L (50) and C (100) to make 40 and 90.
 // C can be placed before D (500) and M (1000) to make 400 and 900.
 // Given a roman numeral, convert it to an integer. Input is guaranteed to be within the range from 1 to 3999.
 
@@ -41,38 +40,37 @@
 // Output: 1994
 // Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
+function romanToInt(s) {
+  /*
+   * Write your code here.
+   */
+}
 
-function romanToInt (s) {
-    /*
-     * Write your code here.
-     */
-  };
-  
-  //////Integer to Roman//////
-  // Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
-  
-  // Symbol       Value
-  // I             1
-  // V             5
-  // X             10
-  // L             50
-  // C             100
-  // D             500
-  // M             1000
-  // For example, two is written as II in Roman numeral, just two one's added together. Twelve is written as, XII, which is simply X + II. The number twenty seven is written as XXVII, which is XX + V + II.
-  
-  // Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:
-  
-  // I can be placed before V (5) and X (10) to make 4 and 9. 
-  // X can be placed before L (50) and C (100) to make 40 and 90. 
-  // C can be placed before D (500) and M (1000) to make 400 and 900.
-  // Given an integer, convert it to a roman numeral. Input is guaranteed to be within the range from 1 to 3999.
-  
-  function intToRoman (num) {
-    /*
-     * Write your code here.
-     */
-  };
+//////Integer to Roman//////
+// Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+
+// Symbol       Value
+// I             1
+// V             5
+// X             10
+// L             50
+// C             100
+// D             500
+// M             1000
+// For example, two is written as II in Roman numeral, just two one's added together. Twelve is written as, XII, which is simply X + II. The number twenty seven is written as XXVII, which is XX + V + II.
+
+// Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:
+
+// I can be placed before V (5) and X (10) to make 4 and 9.
+// X can be placed before L (50) and C (100) to make 40 and 90.
+// C can be placed before D (500) and M (1000) to make 400 and 900.
+// Given an integer, convert it to a roman numeral. Input is guaranteed to be within the range from 1 to 3999.
+
+function intToRoman(num) {
+  /*
+   * Write your code here.
+   */
+}
 
 //////String to Integer (atoi)//////
 // Implement atoi which converts a string to an integer.
@@ -103,7 +101,7 @@ function romanToInt (s) {
 // Example 4:
 // Input: "words and 987"
 // Output: 0
-// Explanation: The first non-whitespace character is 'w', which is not a numerical 
+// Explanation: The first non-whitespace character is 'w', which is not a numerical
 //              digit or a +/- sign. Therefore no valid conversion could be performed.
 
 // Example 5:
@@ -112,9 +110,42 @@ function romanToInt (s) {
 // Explanation: The number "-91283472332" is out of the range of a 32-bit signed integer.
 //              Thefore INT_MIN (−231) is returned.
 
+function myAtoi(str) {
+  /*
+   * Write your code here.
+   */
+}
 
-function myAtoi (str) {
-    /*
-     * Write your code here.
-     */
-  };
+//////Valid Parenthesis//////
+// Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+// An input string is valid if:
+// Open brackets must be closed by the same type of brackets.
+// Open brackets must be closed in the correct order.
+// Note that an empty string is also considered valid.
+
+// Example 1:
+// Input: "()"
+// Output: true
+
+// Example 2:
+// Input: "()[]{}"
+// Output: true
+
+// Example 3:
+// Input: "(]"
+// Output: false
+
+// Example 4:
+// Input: "([)]"
+// Output: false
+
+// Example 5:
+// Input: "{[]}"
+// Output: true
+
+function isValid(s) {
+  /*
+   * Write your code here.
+   */
+}
