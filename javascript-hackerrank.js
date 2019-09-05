@@ -606,3 +606,41 @@ function hopping(n, k) {
   }
   return answer;
 }
+
+
+// Longest Valid Parentheses
+// Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.
+
+// Example 1:
+// Input: "(()"
+// Output: 2
+// Explanation: The longest valid parentheses substring is "()"
+
+// Example 2:
+// Input: ")()())"
+// Output: 4
+// Explanation: The longest valid parentheses substring is "()()"
+
+// Runtime: 52 ms, faster than 98.31% of JavaScript online submissions for Longest Valid Parentheses.
+// Memory Usage: 36.3 MB, less than 100.00% of JavaScript online submissions for Longest Valid Parentheses.
+function longestValidParentheses(s) {
+  let ans = 0;
+  let length = 0;
+  let stack = [-1];
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === "(") {
+      stack.push(i)
+    } else {
+      stack.pop()
+      length = i - stack[stack.length -1]
+      if (length > ans) {
+        ans = length
+      }
+      if (stack.length === 0) {
+        length = 0;
+        stack.push(i)
+      }
+    }
+  }
+  return ans 
+};
