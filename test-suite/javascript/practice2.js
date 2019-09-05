@@ -116,7 +116,7 @@ function myAtoi(str) {
    */
 }
 
-//////Valid Parenthesis//////
+//////Valid Parentheses//////
 // Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
 // An input string is valid if:
@@ -149,3 +149,23 @@ function isValid(s) {
    * Write your code here.
    */
 }
+
+
+//////Longest Valid Parentheses//////
+// Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.
+
+// Example 1:
+// Input: "(()"
+// Output: 2
+// Explanation: The longest valid parentheses substring is "()"
+
+// Example 2:
+// Input: ")()())"
+// Output: 4
+// Explanation: The longest valid parentheses substring is "()()"
+
+function longestValidParentheses(s) {
+    /*
+   * Write your code here.
+   */
+  };

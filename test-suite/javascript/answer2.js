@@ -120,3 +120,26 @@ function isValid(s) {
     return true;
   }
 }
+
+//////Longest Valid Parentheses//////
+function longestValidParentheses(s) {
+    let ans = 0;
+    let length = 0;
+    let stack = [-1];
+    for (let i = 0; i < s.length; i++) {
+      if (s[i] === "(") {
+        stack.push(i)
+      } else {
+        stack.pop()
+        length = i - stack[stack.length -1]
+        if (length > ans) {
+          ans = length
+        }
+        if (stack.length === 0) {
+          length = 0;
+          stack.push(i)
+        }
+      }
+    }
+    return ans 
+  };

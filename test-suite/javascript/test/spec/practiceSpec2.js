@@ -90,7 +90,7 @@ describe("javascript problems", function() {
     });
   });
 
-  describe("Problem 4 - Valid Parenthesis", function() {
+  describe("Problem 4 - Valid Parentheses", function() {
     it("Test Case #1", function() {
       expect(isValid("()")).toBe(true);
     });
@@ -111,4 +111,27 @@ describe("javascript problems", function() {
         expect(isValid("{[]}")).toBe(true);
     });
   });
+
+  describe("Problem 4 - Valid Parentheses", function() {
+    it("Test Case #1", function() {
+      expect(longestValidParentheses("()")).toEqual(2);
+    });
+
+    it("Test Case #2", function() {
+        expect(longestValidParentheses("()(())")).toEqual(6);
+    });
+
+    it("Test Case #3", function() {
+        expect(longestValidParentheses("())()()")).toEqual(4);
+    });
+
+    it("Test Case #4", function() {
+        expect(longestValidParentheses("()(()")).toEqual(2);
+    });
+
+    it("Test Case #5", function() {
+        expect(longestValidParentheses("))")).toEqual(0);
+    });
+  });
+
 });
