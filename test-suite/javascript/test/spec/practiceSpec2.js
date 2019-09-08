@@ -112,7 +112,7 @@ describe("javascript problems", function() {
     });
   });
 
-  describe("Problem 4 - Valid Parentheses", function() {
+  describe("Problem 5 - Longest Valid Parentheses", function() {
     it("Test Case #1", function() {
       expect(longestValidParentheses("()")).toEqual(2);
     });
