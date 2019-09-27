@@ -63,20 +63,24 @@ function intToRoman(num) {
 
 //////String to Integer (atoi)//////
 var myAtoi = function(str) {
+  //return max or min if number is out of range
   const max = Math.pow(2, 31) - 1;
   const min = -Math.pow(2, 31);
-  firstNon = str.search(/[^\s]/);
-  if (firstNon === -1) return 0;
-  let ans = str.substring(firstNon);
-  let subEnd = () => {
+  firstNon = str.search(/[^\s]/);// find the first character
+  if (firstNon === -1) return 0; //return 0 if blank
+  let ans = str.substring(firstNon); // remove white spaces
+  let subEnd = () => { 
+    //find next non-digit and substring everything after and including it
     let end = ans.search(/\D/);
     return end + 1 ? ans.substring(0, end) : ans;
   };
   let posNeg = 1;
   if (ans[0] === "-") {
+    // if string starts with "-", substring symbol, and use -1 to turn ans negative
     posNeg = -1;
     ans = ans.substring(1);
   } else if (ans[0] === "+") {
+    // if string starts with "+", substring symbol
     ans = ans.substring(1);
   }
   if (!parseInt(ans[0]) && ans[0] !== "0") {
@@ -88,13 +92,14 @@ var myAtoi = function(str) {
   return ans;
 };
 
-//////Valid Parenthesis//////
+//////Valid Parenthesss//////
 function isValid(s) {
   let arr = [];
   for (let i = 0; i < s.length; i++) {
     if (s[i] === "{" || s[i] === "(" || s[i] === "[") {
-      arr.push(s[i]);
-    } else if (s[i] === "}") {
+      arr.push(s[i]); //add opens to the stack
+    } else if (s[i] === "}") { 
+      //remove the last open parentheses if the close matches
       if (arr[arr.length - 1] === "{") {
         arr.pop();
       } else {
@@ -115,6 +120,7 @@ function isValid(s) {
     }
   }
   if (arr.length > 0) {
+    // return false if finishes with opens in the stack
     return false;
   } else {
     return true;
@@ -123,23 +129,24 @@ function isValid(s) {
 
 //////Longest Valid Parentheses//////
 function longestValidParentheses(s) {
-    let ans = 0;
-    let length = 0;
-    let stack = [-1];
-    for (let i = 0; i < s.length; i++) {
-      if (s[i] === "(") {
+  let ans = 0;
+  let length = 0;
+  let stack = [-1]; //keep track of opening parentheses
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === "(") {
+      stack.push(i)
+    } else {
+      stack.pop() //remove opening parentheses from stack
+      length = i - stack[stack.length -1]
+      if (length > ans) {
+        ans = length
+      }
+      if (stack.length === 0) {
+        //if stack is empty, start over
+        length = 0;
         stack.push(i)
-      } else {
-        stack.pop()
-        length = i - stack[stack.length -1]
-        if (length > ans) {
-          ans = length
-        }
-        if (stack.length === 0) {
-          length = 0;
-          stack.push(i)
-        }
       }
     }
-    return ans 
-  };
+  }
+  return ans 
+};
