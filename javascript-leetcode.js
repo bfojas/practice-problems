@@ -361,3 +361,43 @@ var removeDuplicates = function(nums) {
     }
     return length
 };
+
+
+
+// Reverse Vowels of a String
+// Write a function that takes a string as input and reverse only the vowels of a string.
+
+// Example 1:
+
+// Input: "hello"
+// Output: "holle"
+// Example 2:
+
+// Input: "leetcode"
+// Output: "leotcede"
+// Note:
+// The vowels does not include the letter "y".
+
+var reverseVowels = function(s) {
+  let vowels ='aeiouAEIOU'
+  let arr = s.split('')
+  let start = 0
+  let end = s.length -1
+  while ( start < end) {
+      while ( start < end && vowels.indexOf(arr[start]) === -1) {
+          start ++
+      }
+      while ( start < end && vowels.indexOf(arr[end]) === -1) {
+          end --
+      }
+      
+      let temp = arr[start]
+      arr[start] = arr[end]
+      
+      arr[end] = temp
+      
+      start++
+      end--
+  }
+  return arr.join('')
+};
